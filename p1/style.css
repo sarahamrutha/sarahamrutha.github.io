@@ -1,13 +1,23 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+}
+
 header{
     display: flex;
-    justify-content: center;
-    background-color: teal;
-    color: black;
+    justify-content: space-between;
+    background-color: pink;
+    color: yellow;
     padding: 10px;
+    font-family: monospace;
 }
+
 li{
     display: inline-block;
-    font-size: 20px;
-    padding: 5px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 12px;
+    padding: 4px;
 }
