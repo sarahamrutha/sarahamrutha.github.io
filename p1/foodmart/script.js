@@ -103,7 +103,6 @@ function removeItem(index) {
   openCart();
 }
 
-// Event listeners
 document.getElementById("cartButton").addEventListener("click", openCart);
 searchInput.addEventListener("input", (e) => renderProducts(e.target.value));
 
