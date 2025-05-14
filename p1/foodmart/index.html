@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Mart</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-container">
       <h1>Food Mart</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <a href="#" id="cartButton">Cart (<span id="cartCount">0</span>)</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h2>Fresh & Organic Groceries</h2>
-      <p>Your daily needs delivered with care.</p>
+      <h2>Everything You Need in One Place</h2>
+      <p>Groceries, snacks, beverages, and essentials.</p>
     </section>
 
     <section class="product-grid" id="productGrid">
-      <!-- JavaScript will inject product cards here -->
+      <!-- JS will populate this -->
     </section>
   </main>
+
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <h3>Your Cart</h3>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"></p>
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="closeCart()">Close</button>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
