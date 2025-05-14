@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -72,6 +74,7 @@ header ul li a:hover {
     color: #555;
 }
 
+/* Horizontal Skills List */
 .about-list {
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +91,7 @@ header ul li a:hover {
     color: #0277bd;
 }
 
-/* Image on Right */
+/* About Image Styling */
 .about-image img {
     width: 250px;
     height: auto;
@@ -97,7 +100,7 @@ header ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Button */
+/* Button Styling */
 button.know,
 .project button {
     padding: 10px 20px;
@@ -116,16 +119,38 @@ button:hover {
 /* Projects Section */
 .project-section {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .project {
-    flex: 1;
-    min-width: 180px;
+    width: 250px;
+    height: 250px; /* Square shape */
     background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.project p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
 }
