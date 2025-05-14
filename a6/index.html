@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    input:nth-of-type(1) {
+      animation-delay: 0.2s;
+    }
+
+    input:nth-of-type(2) {
+      animation-delay: 0.4s;
+    }
+
+    button {
+      animation-delay: 0.6s;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    
+    input:invalid {
+      border-color: rgba(255, 51, 0, 0.71);
+    }
+
+    input:valid {
+      border-color: rgb(0, 128, 19);
+    }
+
+    #output {
+      margin-top: 20px;
+      opacity: 0;
+      color: #333;
+      font-weight: bold;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form onsubmit="event.preventDefault();">
+    <input type="email" placeholder="Enter email" required id="email">
+    <input type="password" placeholder="Enter password" required id="password">
+    <button type="submit" onclick="displayInfo()">Submit</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    function displayInfo() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const output = document.getElementById('output');
+      output.textContent = `Email: ${email} , Password: ${password}`;
+      output.style.opacity = 1; // Show the output
+    }
+  </script>
+
+</body>
+</html>
