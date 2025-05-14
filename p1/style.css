@@ -1,26 +1,19 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
-    line-height: 1.6;
-    padding: 20px;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: auto;
-    background: #fff;
     padding: 20px;
-    border-radius: 10px;
 }
 
 /* Header */
@@ -33,89 +26,106 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #2c3e50;
 }
 
-nav ul {
-    display: flex;
+header ul {
     list-style: none;
+    display: flex;
     gap: 20px;
 }
 
-nav ul li a {
+header ul li a {
     text-decoration: none;
     color: #1abc9c;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+header ul li a:hover {
     text-decoration: underline;
 }
 
-/* Home Section */
-#home {
+/* About Section */
+.about-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
     margin-bottom: 50px;
 }
 
-.box {
+.about-text {
     flex: 1;
+    text-align: justify;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 .summary {
-    margin-top: 10px;
     font-size: 1rem;
+    margin-bottom: 15px;
     color: #555;
 }
 
-/* Image Styling */
-#home img {
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.about-list li {
+    background-color: #e1f5fe;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #0277bd;
+}
+
+/* Image on Right */
+.about-image img {
     width: 250px;
     height: auto;
     border-radius: 10px;
-    float: right;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Button */
-button {
-    margin-top: 20px;
+button.know,
+.project button {
     padding: 10px 20px;
     background-color: #1abc9c;
-    border: none;
     color: white;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 button:hover {
     background-color: #16a085;
 }
 
-/* Project Section */
-#projects {
-    margin-top: 40px;
+/* Projects Section */
+.project-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .project {
-    background: #ecf0f1;
+    flex: 1;
+    min-width: 250px;
+    background-color: #ecf0f1;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 10px;
-}
-
-.project h3 {
-    margin-bottom: 10px;
-}
-
-footer {
     text-align: center;
-    margin-top: 50px;
-    color: #888;
 }
