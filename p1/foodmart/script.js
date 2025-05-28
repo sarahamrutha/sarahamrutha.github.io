@@ -1,5 +1,5 @@
 const products = [
-  { name: "Rice (5kg)", price: 12.99, image: "images/rice.jpeg" },
+  { name: "Rice (5kg)", price: 12.99, image: "images/rice.png" },
   { name: "Milk (1L)", price: 1.99, image: "https://source.unsplash.com/featured/?milk" },
   { name: "Bread", price: 2.49, image: "https://source.unsplash.com/featured/?bread" },
   { name: "Eggs (12)", price: 3.50, image: "https://source.unsplash.com/featured/?eggs" },
